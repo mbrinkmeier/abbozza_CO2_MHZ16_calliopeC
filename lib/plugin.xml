@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="abbozzaCO2_MHZ16" system="calliopeC" parent="devices">
+   <name>MH-Z16 CO2 Sensor </name>
+   <description>
+       Dieses abbozza! Calliope Plugin stellt Blöcke zur Nutzung des MH-Z16 CO2 Sesnors zur Verfügung
+   </description>
+   <js file="blocks.js"/>
+   <feature id="feat.MHZ16" option="abbozzaCO2_MHZ16.enabled">
+      <category name ="Sensors" id="cat.DEVIN">
+        <block type="dev_mhz16_device"/>
+        <block type="dev_mhz16_calibrate"/>
+        <block type="dev_mhz16_measurement"/>
+        <block type="dev_mhz16_get_ppm"/>
+      </category>
+   </feature>
+   <locales>
+       <language id="en">
+            <msg id="cat.SENSORS">Seinsors</msg>
+            <msg id="dev.MHZ16">MH-Z16 CO2-Sensor # TX # RX</msg>
+            <msg id="dev.MHZ16_CALIBRATE">Calibrate</msg>
+            <msg id="dev.MHZ16_MEASUREMENT">Measure with #</msg>
+            <msg id="dev.MHZ16_LAST_PPM">Last measurement of # (ppm)</msg>
+       </language>
+       <language id="de">           
+            <msg id="cat.SENSORS">Sensoren</msg>
+            <msg id="dev.MHZ16">MH-Z16 CO2-Sensor # TX # RX</msg>
+            <msg id="dev.MHZ16_CALIBRATE">Kalibriere</msg>
+            <msg id="dev.MHZ16_MEASUREMENT">Führe Messung mit # aus</msg>
+            <msg id="dev.MHZ16_LAST_PPM">Letzte Messung von # (ppm)</msg>
+       </language>
+   </locales>
+   <requirements>
+       <install file="MHZ16.h" target="MHZ16.h"/>
+       <install file="MHZ16.cpp" target="MHZ16.cpp"/>
+   </requirements>
+</plugin>
